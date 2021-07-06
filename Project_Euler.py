@@ -71,7 +71,7 @@ def Euler_21(number):
 print(Euler_21(10000))
 
 
-
+print('coucou')
 
 
 
