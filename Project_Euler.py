@@ -68,7 +68,21 @@ def Euler_21(number):
     
     return sum([sum(i) for i in set(result)])
 
-print(Euler_21(10000))
+def Euler_22():
+    with open('D:\p022_names.txt') as f:
+        lines = f.readlines()
+
+    lines= lines[0].split(',')
+    lines = [i.replace('"','') for i in lines]
+    lines.sort()
+
+    for k,i in enumerate(lines):
+        s=0
+        for j in i:
+            s+= ord(j)-64
+            lines[k] = s
+    
+    return sum([lines[i]*(i+1) for i in range(len(lines))])
 
 
 
